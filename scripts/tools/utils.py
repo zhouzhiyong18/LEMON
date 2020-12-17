@@ -273,7 +273,7 @@ class DataUtils:
         K.set_image_data_format("channels_last")
 
         lemon_cfg = configparser.ConfigParser()
-        lemon_cfg.read("./config/experiments.conf")
+        lemon_cfg.read(f"./config/{config_name}")
         dataset_dir = lemon_cfg['parameters']['dataset_dir']
         x_test = y_test = []
         if 'fashion-mnist' in exp:
